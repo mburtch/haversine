@@ -12,7 +12,8 @@
     "lodash": ">=2.4.1"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "chai": "~1.9.2"
   },
   "keywords": [
     "haversine",
