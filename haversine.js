@@ -124,6 +124,12 @@
     var radius, distance;
 
     // check the input
+    if (
+      (! _.isObject(pt1) || ! _.has(pt1, 'latitude') || ! _.has(pt1, 'longitude')) ||
+      (! _.isObject(pt2) || ! _.has(pt2, 'latitude') || ! _.has(pt2, 'longitude'))
+    ) {
+      throw new Error('haversine requires two objects with latitude and longitude properties');
+    }
 
     // calculate the radius to work with
     radius = (options && options.radius) || DEFAULT_RADIUS_KM;
